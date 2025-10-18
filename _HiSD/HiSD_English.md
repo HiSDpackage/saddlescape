@@ -468,11 +468,11 @@ $\Delta \boldsymbol{g}^{(n)} = \boldsymbol{g}^{(n)} - \boldsymbol{g}^{(n-1)}$.
 Based on the quasi-Newton method, we solve the optimization problems
 
 $$
-\min_{\beta^{(n)}} \|\Delta \boldsymbol{x}^{(n)} - \beta^{(n)} \boldsymbol{g}^{(n)}\|
+\min_{\beta^{(n)}} \|\Delta \boldsymbol{x}^{(n)} / \beta^{(n)} - \boldsymbol{g}^{(n)}\|
 $$
 
 $$
-\min_{\beta^{(n)}} \|\Delta \boldsymbol{x}^{(n)} / \beta^{(n)} - \boldsymbol{g}^{(n)}\|
+\min_{\beta^{(n)}} \|\Delta \boldsymbol{x}^{(n)} - \beta^{(n)} \boldsymbol{g}^{(n)}\|
 $$
 
 to obtain the BB1 and BB2 step sizes:
