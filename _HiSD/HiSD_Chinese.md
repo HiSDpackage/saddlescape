@@ -387,11 +387,11 @@ $\beta^{(n)}\|\boldsymbol{g}^{(n)}\|$ 设置一个上界 $\tau$
 $\Delta \boldsymbol{g}^{(n)}=\boldsymbol{g}^{(n)}-\boldsymbol{g}^{(n-1)}$，根据拟牛顿法的思想，通过分别求解优化问题
 
 $$
-\min_{\beta^{(n)}}\|\Delta \boldsymbol{x}^{(n)}-\beta^{(n)}\boldsymbol{g}^{(n)}\|
+\min_{\beta^{(n)}}\|\Delta \boldsymbol{x}^{(n)}/\beta^{(n)}-\boldsymbol{g}^{(n)}\|
 $$
 
 $$
-\min_{\beta^{(n)}}\|\Delta \boldsymbol{x}^{(n)}/\beta^{(n)}-\boldsymbol{g}^{(n)}\|
+\min_{\beta^{(n)}}\|\Delta \boldsymbol{x}^{(n)}-\beta^{(n)}\boldsymbol{g}^{(n)}\|
 $$
 
 可得BB1和BB2步长
