@@ -362,7 +362,13 @@ for i in range(len(MyLandscape.SaddleList)):
 
 ![png](Ex_4_PhaseField_NewKappa_files/Ex_4_PhaseField-NewKappa_17_0.png)
 
-另外，我们也可以基于快速傅里叶变换(FFT)的归一化互相关来定义判断函数，并获得相同的结果。
+([完整的结果请参考GitHub仓库中的文件](https://github.com/HiSDpackage/saddlescape/blob/main/gallery/Ex_4_PhaseField-NewKappa.ipynb))
+
+类似上面$\kappa=0.02$的情形我们可以手动绘制如下图形：
+
+![png](Ex_4_PhaseField_NewKappa_files/Ex_4_PhaseField-NewKappa.png)
+
+另外，我们也可以基于快速傅里叶变换(FFT)的归一化互相关来定义判断函数，并获得相同的结果([Ex_4_PhaseField-NewSameSaddle](https://github.com/HiSDpackage/saddlescape/blob/main/gallery/Ex_4_PhaseField-NewSameSaddle.ipynb),[Ex_4_PhaseField-NewKappa-NewSameSaddle](https://github.com/HiSDpackage/saddlescape/blob/main/gallery/Ex_4_PhaseField-NewKappa-NewSameSaddle.ipynb))。
 
 ```python
 import numpy as np

@@ -382,7 +382,13 @@ However, since the BB step size might become excessively large in regions with s
 
 ![png](Ex_4_PhaseField_NewKappa_files/Ex_4_PhaseField-NewKappa_17_0.png)
 
-Besides, we can also define the judgement function with normalized cross-correlation based on Fast Fourier Transform(FFT) and will get the same results.
+([For the complete results, please refer to the file in the GitHub repository](https://github.com/HiSDpackage/saddlescape/blob/main/gallery/Ex_4_PhaseField-NewKappa.ipynb))
+
+Similarly to the case of $\kappa=0.02$ above, we can manually draw the following figure:
+
+![png](Ex_4_PhaseField_NewKappa_files/Ex_4_PhaseField-NewKappa.png)
+
+Besides, we can also define the judgement function with normalized cross-correlation based on Fast Fourier Transform(FFT) and will get the same results([Ex_4_PhaseField-NewSameSaddle](https://github.com/HiSDpackage/saddlescape/blob/main/gallery/Ex_4_PhaseField-NewSameSaddle.ipynb),[Ex_4_PhaseField-NewKappa-NewSameSaddle](https://github.com/HiSDpackage/saddlescape/blob/main/gallery/Ex_4_PhaseField-NewKappa-NewSameSaddle.ipynb)).
 
 ```python
 import numpy as np
