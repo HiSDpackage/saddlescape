@@ -84,7 +84,6 @@ MyLandscape.Run()
     [HiSD] Current parameters (initialized):
     [Config Sync] `Dim` parameter auto-adjusted to 3 based on `InitialPoint` dimensionality.
     Parameter `NumericalGrad` not specified - using default value False.
-    Using `EnergyFunction` instead of `Grad` - enabling auto-differentiation mode.
     Parameter `DimerLength` not specified - using default value 1e-05.
     Parameter `Tolerance` not specified - using default value 1e-06.
     Parameter `SearchArea` not specified - using default value 1000.0.
@@ -92,8 +91,9 @@ MyLandscape.Run()
     Parameter `EigenStepSize` not specified - using default value 1e-05.
     Parameter `ExactHessian` not specified - using default value False.
     Parameter `PrecisionTol` not specified - using default value 1e-05.
+    Parameter `EigvecUnified` not specified - using default value False.
     Parameter 'GradientSystem' not provided. Enabling automatic symmetry detection.
-    Parameter 'SymmetryCheck' not provided. Defaulting to True with automatic detection.
+    Parameter 'SymmetryCheck' not provided. Defaulting to True with automatic detection if available.
     
     
     Gradient system detected. Activating HiSD algorithm.
@@ -102,17 +102,15 @@ MyLandscape.Run()
     Landscape Configuration:
     ------------------------------
     [Landscape] Current parameters (initialized):
-    Parameter `SameJudgementMethod` not specified - using default value <function LandscapeCheckParam.<locals>.<lambda> at 0x00000250D34C2B60>.
+    Parameter `SameJudgementMethod` not specified - using default value <function LandscapeCheckParam.<locals>.<lambda> at 0x000002D073C50D30>.
     Parameter `PerturbationMethod` not specified - using default value uniform.
     Parameter `InitialEigenVectors` not specified - using default value None.
     Parameter `PerturbationNumber` not specified - using default value 2.
     Parameter `SaveTrajectory` not specified - using default value True.
     Parameter `MaxIndexGap` not specified - using default value 1.
     
-    
     Start running:
     ------------------------------
-    
     
     
     
@@ -253,24 +251,14 @@ MyLandscape.Run()
     ------------------------------
     
     
-    Iteration: 100|| Norm of gradient: 0.002719
-    Iteration: 200|| Norm of gradient: 0.002087
-    Iteration: 300|| Norm of gradient: 0.000004
-    Non-degenerate saddle point identified: Morse index =1 (number of negative eigenvalues).
-    
-    
-    From saddle point (index-2, ID-1) search index-1:
-    ------------------------------
-    
-    
-    Iteration: 100|| Norm of gradient: 0.002773
-    Iteration: 200|| Norm of gradient: 0.002087
-    Iteration: 300|| Norm of gradient: 0.000004
+    Iteration: 100|| Norm of gradient: 4.902430
+    Iteration: 200|| Norm of gradient: 0.001221
+    Iteration: 300|| Norm of gradient: 0.000026
     Non-degenerate saddle point identified: Morse index =1 (number of negative eigenvalues).
 
     
 
-......([For the complete results, please refer to the file in the GitHub repository](https://github.com/HiSDpackage/saddlescape/blob/main/_Examples/Ex_3_Cubic.ipynb))
+......([For the complete results, please refer to the file in the GitHub repository](https://github.com/HiSDpackage/saddlescape/blob/main/gallery/Ex_3_Cubic.ipynb))
 
     
 

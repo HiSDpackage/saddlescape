@@ -163,7 +163,6 @@ MyLandscape.Run()
     [Landscape] Current parameters (initialized):
     Parameter `PerturbationMethod` not specified - using default value uniform.
     Parameter `InitialEigenVectors` not specified - using default value None.
-    Parameter `SaveTrajectory` not specified - using default value True.
     
     Start running:
     ------------------------------
@@ -181,122 +180,99 @@ MyLandscape.Run()
     ------------------------------
     
     
-    Iteration: 10|| Norm of gradient: 20.485886
-    Iteration: 20|| Norm of gradient: 4.285674
-    Iteration: 30|| Norm of gradient: 1.408871
-    Iteration: 40|| Norm of gradient: 0.656639
-    Iteration: 50|| Norm of gradient: 0.381628
-    Iteration: 60|| Norm of gradient: 0.244771
-    Iteration: 70|| Norm of gradient: 0.177167
-    Iteration: 80|| Norm of gradient: 0.138191
-    Iteration: 90|| Norm of gradient: 0.104285
-    Iteration: 100|| Norm of gradient: 0.082284
-    Iteration: 110|| Norm of gradient: 0.069386
-    Iteration: 120|| Norm of gradient: 0.059530
-    Iteration: 130|| Norm of gradient: 0.053229
-    Iteration: 140|| Norm of gradient: 0.050366
-    Iteration: 150|| Norm of gradient: 0.057585
-    Iteration: 160|| Norm of gradient: 0.060515
-    Iteration: 170|| Norm of gradient: 0.119935
-    Iteration: 180|| Norm of gradient: 0.223856
-    Iteration: 190|| Norm of gradient: 1.142581
-    Iteration: 200|| Norm of gradient: 3.623269
-    Iteration: 210|| Norm of gradient: 0.288505
-    Iteration: 220|| Norm of gradient: 0.259231
-    Iteration: 230|| Norm of gradient: 0.421667
-    Iteration: 240|| Norm of gradient: 0.264348
-    Iteration: 250|| Norm of gradient: 0.310100
-    Iteration: 260|| Norm of gradient: 3.550660
-    Iteration: 270|| Norm of gradient: 0.606497
-    Iteration: 280|| Norm of gradient: 0.454404
-    Iteration: 290|| Norm of gradient: 0.433560
-    Iteration: 300|| Norm of gradient: 0.865582
-    Iteration: 310|| Norm of gradient: 0.568534
-    Iteration: 320|| Norm of gradient: 1.099565
-    Iteration: 330|| Norm of gradient: 3.935289
-    Iteration: 340|| Norm of gradient: 14.056392
-    Iteration: 350|| Norm of gradient: 20.013191
-    Iteration: 360|| Norm of gradient: 26.276739
-    Iteration: 370|| Norm of gradient: 17.973981
-    Iteration: 380|| Norm of gradient: 9.570139
-    Iteration: 390|| Norm of gradient: 7.898909
-    Iteration: 400|| Norm of gradient: 5.530629
-    Iteration: 410|| Norm of gradient: 1.682866
-    Iteration: 420|| Norm of gradient: 1.534876
-    Iteration: 430|| Norm of gradient: 1.415859
-    Iteration: 440|| Norm of gradient: 1.287483
-    Iteration: 450|| Norm of gradient: 1.147012
-    Iteration: 460|| Norm of gradient: 0.999773
-    Iteration: 470|| Norm of gradient: 0.852042
-    Iteration: 480|| Norm of gradient: 0.709724
-    Iteration: 490|| Norm of gradient: 0.577701
-    Iteration: 500|| Norm of gradient: 0.459658
-    Iteration: 510|| Norm of gradient: 0.358412
-    Iteration: 520|| Norm of gradient: 0.276341
-    Iteration: 530|| Norm of gradient: 0.215450
-    Iteration: 540|| Norm of gradient: 0.176511
-    Iteration: 550|| Norm of gradient: 0.157046
-    Iteration: 560|| Norm of gradient: 0.150524
-    Iteration: 570|| Norm of gradient: 0.149323
-    Iteration: 580|| Norm of gradient: 0.163116
-    Iteration: 590|| Norm of gradient: 0.145903
-    Iteration: 600|| Norm of gradient: 0.133741
-    Iteration: 610|| Norm of gradient: 0.078400
-    Iteration: 620|| Norm of gradient: 0.075997
-    Iteration: 630|| Norm of gradient: 0.072381
-    Iteration: 640|| Norm of gradient: 0.067905
-    Iteration: 650|| Norm of gradient: 0.062671
-    Iteration: 660|| Norm of gradient: 0.056838
-    Iteration: 670|| Norm of gradient: 0.050598
-    Iteration: 680|| Norm of gradient: 0.044157
-    Iteration: 690|| Norm of gradient: 0.037726
-    Iteration: 700|| Norm of gradient: 0.031520
-    Iteration: 710|| Norm of gradient: 0.025752
-    Iteration: 720|| Norm of gradient: 0.020635
-    Iteration: 730|| Norm of gradient: 0.016385
-    Iteration: 740|| Norm of gradient: 0.013202
-    Iteration: 750|| Norm of gradient: 0.011194
-    Iteration: 760|| Norm of gradient: 0.010237
-    Iteration: 770|| Norm of gradient: 0.009950
-    Iteration: 780|| Norm of gradient: 0.011293
-    Iteration: 790|| Norm of gradient: 0.009888
-    Iteration: 800|| Norm of gradient: 0.009359
-    Iteration: 810|| Norm of gradient: 0.006664
-    Iteration: 820|| Norm of gradient: 0.006454
-    Iteration: 830|| Norm of gradient: 0.006139
-    Iteration: 840|| Norm of gradient: 0.005749
-    Iteration: 850|| Norm of gradient: 0.005294
-    Iteration: 860|| Norm of gradient: 0.004790
-    Iteration: 870|| Norm of gradient: 0.004252
-    Iteration: 880|| Norm of gradient: 0.003700
-    Iteration: 890|| Norm of gradient: 0.003151
-    Iteration: 900|| Norm of gradient: 0.002624
-    Iteration: 910|| Norm of gradient: 0.002137
-    Iteration: 920|| Norm of gradient: 0.001708
-    Iteration: 930|| Norm of gradient: 0.001353
-    Iteration: 940|| Norm of gradient: 0.001091
-    Iteration: 950|| Norm of gradient: 0.000927
-    Iteration: 960|| Norm of gradient: 0.000851
-    Iteration: 970|| Norm of gradient: 0.000829
-    Iteration: 980|| Norm of gradient: 0.002042
-    Iteration: 990|| Norm of gradient: 0.000936
-    Iteration: 1000|| Norm of gradient: 0.000801
-    Iteration: 1010|| Norm of gradient: 0.000449
-    Iteration: 1020|| Norm of gradient: 0.000434
-    Iteration: 1030|| Norm of gradient: 0.000413
-    Iteration: 1040|| Norm of gradient: 0.000387
-    Iteration: 1050|| Norm of gradient: 0.000357
-    Iteration: 1060|| Norm of gradient: 0.000323
-    Iteration: 1070|| Norm of gradient: 0.000287
-    Iteration: 1080|| Norm of gradient: 0.000249
-    Iteration: 1090|| Norm of gradient: 0.000212
-    Iteration: 1100|| Norm of gradient: 0.000177
-    Iteration: 1110|| Norm of gradient: 0.000144
-    Iteration: 1120|| Norm of gradient: 0.000115
+    Iteration: 10|| Norm of gradient: 2.626117
+    Iteration: 20|| Norm of gradient: 2.073056
+    Iteration: 30|| Norm of gradient: 1.778669
+    Iteration: 40|| Norm of gradient: 1.685068
+    Iteration: 50|| Norm of gradient: 1.643202
+    Iteration: 60|| Norm of gradient: 4.551244
+    Iteration: 70|| Norm of gradient: 2.191489
+    Iteration: 80|| Norm of gradient: 1.932887
+    Iteration: 90|| Norm of gradient: 1.624164
+    Iteration: 100|| Norm of gradient: 1.375257
+    Iteration: 110|| Norm of gradient: 1.139303
+    Iteration: 120|| Norm of gradient: 0.913087
+    Iteration: 130|| Norm of gradient: 0.756791
+    Iteration: 140|| Norm of gradient: 0.647716
+    Iteration: 150|| Norm of gradient: 0.592122
+    Iteration: 160|| Norm of gradient: 0.578698
+    Iteration: 170|| Norm of gradient: 0.567598
+    Iteration: 180|| Norm of gradient: 0.548581
+    Iteration: 190|| Norm of gradient: 0.516373
+    Iteration: 200|| Norm of gradient: 0.466288
+    Iteration: 210|| Norm of gradient: 0.282131
+    Iteration: 220|| Norm of gradient: 0.269620
+    Iteration: 230|| Norm of gradient: 0.253248
+    Iteration: 240|| Norm of gradient: 0.234388
+    Iteration: 250|| Norm of gradient: 0.213168
+    Iteration: 260|| Norm of gradient: 0.190388
+    Iteration: 270|| Norm of gradient: 0.166994
+    Iteration: 280|| Norm of gradient: 0.143766
+    Iteration: 290|| Norm of gradient: 0.121361
+    Iteration: 300|| Norm of gradient: 0.100343
+    Iteration: 310|| Norm of gradient: 0.081218
+    Iteration: 320|| Norm of gradient: 0.064524
+    Iteration: 330|| Norm of gradient: 0.050891
+    Iteration: 340|| Norm of gradient: 0.040991
+    Iteration: 350|| Norm of gradient: 0.035177
+    Iteration: 360|| Norm of gradient: 0.032834
+    Iteration: 370|| Norm of gradient: 0.032392
+    Iteration: 380|| Norm of gradient: 0.032298
+    Iteration: 390|| Norm of gradient: 0.031682
+    Iteration: 400|| Norm of gradient: 0.030207
+    Iteration: 410|| Norm of gradient: 0.024279
+    Iteration: 420|| Norm of gradient: 0.023424
+    Iteration: 430|| Norm of gradient: 0.022173
+    Iteration: 440|| Norm of gradient: 0.020657
+    Iteration: 450|| Norm of gradient: 0.018927
+    Iteration: 460|| Norm of gradient: 0.017052
+    Iteration: 470|| Norm of gradient: 0.015098
+    Iteration: 480|| Norm of gradient: 0.013126
+    Iteration: 490|| Norm of gradient: 0.011190
+    Iteration: 500|| Norm of gradient: 0.009342
+    Iteration: 510|| Norm of gradient: 0.007631
+    Iteration: 520|| Norm of gradient: 0.006112
+    Iteration: 530|| Norm of gradient: 0.004849
+    Iteration: 540|| Norm of gradient: 0.003910
+    Iteration: 550|| Norm of gradient: 0.003333
+    Iteration: 560|| Norm of gradient: 0.003077
+    Iteration: 570|| Norm of gradient: 0.003009
+    Iteration: 580|| Norm of gradient: 0.002989
+    Iteration: 590|| Norm of gradient: 0.002935
+    Iteration: 600|| Norm of gradient: 0.002811
+    Iteration: 610|| Norm of gradient: 0.002310
+    Iteration: 620|| Norm of gradient: 0.002230
+    Iteration: 630|| Norm of gradient: 0.002112
+    Iteration: 640|| Norm of gradient: 0.001969
+    Iteration: 650|| Norm of gradient: 0.001805
+    Iteration: 660|| Norm of gradient: 0.001626
+    Iteration: 670|| Norm of gradient: 0.001440
+    Iteration: 680|| Norm of gradient: 0.001251
+    Iteration: 690|| Norm of gradient: 0.001065
+    Iteration: 700|| Norm of gradient: 0.000888
+    Iteration: 710|| Norm of gradient: 0.000724
+    Iteration: 720|| Norm of gradient: 0.000579
+    Iteration: 730|| Norm of gradient: 0.000460
+    Iteration: 740|| Norm of gradient: 0.000371
+    Iteration: 750|| Norm of gradient: 0.000317
+    Iteration: 760|| Norm of gradient: 0.000293
+    Iteration: 770|| Norm of gradient: 0.000286
+    Iteration: 780|| Norm of gradient: 0.000283
+    Iteration: 790|| Norm of gradient: 0.000278
+    Iteration: 800|| Norm of gradient: 0.000266
+    Iteration: 810|| Norm of gradient: 0.000218
+    Iteration: 820|| Norm of gradient: 0.000211
+    Iteration: 830|| Norm of gradient: 0.000200
+    Iteration: 840|| Norm of gradient: 0.000186
+    Iteration: 850|| Norm of gradient: 0.000171
+    Iteration: 860|| Norm of gradient: 0.000154
+    Iteration: 870|| Norm of gradient: 0.000137
+    Iteration: 880|| Norm of gradient: 0.000119
+    Iteration: 890|| Norm of gradient: 0.000101
     [WARNING] Degenerate saddle point detected under precision tol=1e-05: Hessian matrix may contain zero eigenvalue(s).
     Eigenvalue spectrum: negative=2, zero=2, positive=4092. 
 
-......([For the complete results, please refer to the file in the GitHub repository](https://github.com/HiSDpackage/saddlescape/blob/main/_Examples/Ex_4_PhaseField.ipynb))
+......([For the complete results, please refer to the file in the GitHub repository](https://github.com/HiSDpackage/saddlescape/blob/main/gallery/Ex_4_PhaseField.ipynb))
 
 
 
@@ -394,9 +370,63 @@ for i in range(len(MyLandscape.SaddleList)):
 
 By linking the saddle-point phase field schematic diagram with the solution landscape, we can establish the connection between them：
 
-![png](Ex_4_PhaseField_files/Ex_4_PhaseField_new.png)
+![png](Ex_4_PhaseField_files/Ex_4_PhaseField.png)
     
 
 
+Moreover, for a system with $\kappa=0.01$ that possesses a more complex solution landscape, we can initially employ the fast BB step size combined with Nesterov acceleration to obtain an approximate solution landscape. 
+
+![png](Ex_4_PhaseField_NewKappa_files/Ex_4_PhaseField-NewKappa_14_0.png)
+
+However, since the BB step size might become excessively large in regions with steep gradients, potentially leading to algorithm divergence and incomplete exploration, we subsequently restart the search using a fixed small step size to construct the complete solution landscape. This two-stage strategy of accelerated search followed by refined exploration effectively balances computational efficiency and solution accuracy. The final solution landscape obtained through this approach is presented as follows:
+
+![png](Ex_4_PhaseField_NewKappa_files/Ex_4_PhaseField-NewKappa_17_0.png)
+
+Besides, we can also define the judgement function with normalized cross-correlation based on Fast Fourier Transform(FFT) and will get the same results.
+
+```python
+import numpy as np
+from numpy.fft import fft2, ifft2
+
+def SameSaddle(x, y):
+    """
+    Determine if two solutions are equivalent under periodic translation
+    using normalized cross-correlation.
+    
+    Correctly distinguishes A vs shifted(A) (True) from A vs shifted(-A) (False),
+    even for self-antisymmetric cases.
+    """
+    n = 64
+    A = x.reshape(n, n)
+    B = y.reshape(n, n)
+
+    # 2D Fourier transforms
+    fft_A = fft2(A)
+    fft_B = fft2(B)
+    
+    # Cross-correlation spectrum in frequency domain
+    cross_corr_spectrum = np.conj(fft_A) * fft_B
+    
+    # Inverse transform to real space
+    real_space_corr = np.real(ifft2(cross_corr_spectrum))
+    
+    # Find maximum correlation
+    max_corr = np.max(real_space_corr)
+    
+    # Normalization factor (energy of A)
+    norm_factor = np.sum(A**2)
+    if norm_factor < 1e-7:
+        # Zero field case
+        return np.sum(B**2) < 1e-7
+
+    # Normalized peak correlation
+    normalized_max_corr = max_corr / norm_factor
+
+    # Threshold for equivalence
+    if normalized_max_corr > 0.99:
+        return True
+    
+    return False
+```
 
     
