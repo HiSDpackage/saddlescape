@@ -62,6 +62,8 @@ def LandscapeCheckParam(instance, **kwargs):
 	elif instance.PerturbationMethod == "uniform":
 		instance.PerMethod = uniformper
 
+	instance.calHiSD.SaveTrajectory = instance.SaveTrajectory
+
 
 def auto_checking_parameter(instance, param_name, kwargs, param_value):
 	"""
@@ -152,6 +154,13 @@ def auto_checking_parameter(instance, param_name, kwargs, param_value):
 			else:
 				raise ValueError(
 					f"Invalid `MaxIndexGap` value: expected positive integer, got {kwargs['MaxIndexGap']} (type={type(kwargs['MaxIndexGap']).__name__})."
+				)
+		if param_name == "SaveTrajectory":
+			if isinstance(kwargs["SaveTrajectory"], bool):
+				return kwargs["SaveTrajectory"]
+			else:
+				raise ValueError(
+					f"Invalid `SaveTrajectory` value: expected boolean, got {kwargs['SaveTrajectory']} (type={type(kwargs['SaveTrajectory']).__name__})."
 				)
 
 

@@ -125,8 +125,10 @@ def LandscapeRun(instance):
 						pertemp = instance.PerMethod(
 							instance.Dim, instance.PerturbationRadius
 						)
-						PerturbationList.append(pertemp)
-						PerturbationList.append(-pertemp)
+						pertemp_projection=tempsearchinitial[3]@(tempsearchinitial[3].T@pertemp)
+						pertemp_projection_normalized=instance.PerturbationRadius*pertemp_projection/np.clip(np.linalg.norm(pertemp_projection),1e-10,None)
+						PerturbationList.append(pertemp_projection_normalized)
+						PerturbationList.append(-pertemp_projection_normalized)
 					for per in PerturbationList:
 						instance.calHiSD.InitialPoint = tempsearchinitial[1] + per
 						print("\n")
@@ -216,8 +218,10 @@ def LandscapeRun(instance):
 					pertemp = instance.PerMethod(
 						instance.Dim, instance.PerturbationRadius
 					)
-					PerturbationList.append(pertemp)
-					PerturbationList.append(-pertemp)
+					pertemp_projection=tempsearchinitial[3]@(tempsearchinitial[3].T@pertemp)
+					pertemp_projection_normalized=instance.PerturbationRadius*pertemp_projection/np.clip(np.linalg.norm(pertemp_projection),1e-10,None)
+					PerturbationList.append(pertemp_projection_normalized)
+					PerturbationList.append(-pertemp_projection_normalized)
 				for per in PerturbationList:
 					instance.calHiSD.InitialPoint = tempsearchinitial[1] + per
 					print("\n")
