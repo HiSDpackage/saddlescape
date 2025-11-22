@@ -42,7 +42,10 @@ def HiSDIteration(instance):
 	WhetherBB = instance.BBStep
 	mom = instance.Momentum
 	dt = instance.TimeStep
-	x_record = copy.deepcopy(x.reshape(1, instance.Dim))
+	if instance.SaveTrajectory:
+		x_record = copy.deepcopy(x.reshape(1, instance.Dim))
+	else:
+		x_record = None
 	gnorm_record = []
 	timestep_record = [0]
 	g = instance.Grad(x)
@@ -91,7 +94,8 @@ def HiSDIteration(instance):
 			xnow = x.reshape(
 				-1,
 			)
-			x_record = np.append(x_record, x.reshape(1, instance.Dim), axis=0)
+			if instance.SaveTrajectory:
+				x_record = np.append(x_record, x.reshape(1, instance.Dim), axis=0)
 			if np.linalg.norm(xnow - xini) > instance.SearchArea:
 				print(
 					"[WARNING] Iteration diverged: Search point exceeds feasible region. Skipping to next search."
@@ -144,7 +148,8 @@ def HiSDIteration(instance):
 			xnow = x.reshape(
 				-1,
 			)
-			x_record = np.append(x_record, x.reshape(1, instance.Dim), axis=0)
+			if instance.SaveTrajectory:
+				x_record = np.append(x_record, x.reshape(1, instance.Dim), axis=0)
 			if np.linalg.norm(xnow - xini) > instance.SearchArea:
 				print(
 					"[WARNING] Iteration diverged: Search point exceeds feasible region. Skipping to next search."
@@ -227,7 +232,10 @@ def SDIteration(instance):
 	WhetherBB = instance.BBStep
 	mom = instance.Momentum
 	dt = instance.TimeStep
-	x_record = copy.deepcopy(x.reshape(1, instance.Dim))
+	if instance.SaveTrajectory:
+		x_record = copy.deepcopy(x.reshape(1, instance.Dim))
+	else:
+		x_record = None
 	gnorm_record = []
 	timestep_record = [0]
 	g = instance.Grad(x)
@@ -275,7 +283,8 @@ def SDIteration(instance):
 			xnow = x.reshape(
 				-1,
 			)
-			x_record = np.append(x_record, x.reshape(1, instance.Dim), axis=0)
+			if instance.SaveTrajectory:
+				x_record = np.append(x_record, x.reshape(1, instance.Dim), axis=0)
 			if np.linalg.norm(xnow - xini) > instance.SearchArea:
 				print(
 					"[WARNING] Iteration diverged: Search point exceeds feasible region. Skipping to next search."
@@ -322,7 +331,8 @@ def SDIteration(instance):
 			xnow = x.reshape(
 				-1,
 			)
-			x_record = np.append(x_record, x.reshape(1, instance.Dim), axis=0)
+			if instance.SaveTrajectory:
+				x_record = np.append(x_record, x.reshape(1, instance.Dim), axis=0)
 			if np.linalg.norm(xnow - xini) > instance.SearchArea:
 				print(
 					"[WARNING] Iteration diverged: Search point exceeds feasible region. Skipping to next search."
