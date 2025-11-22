@@ -1,6 +1,6 @@
 # Copyright (c) Lei ZHANG, Yuyang LIU
 # Author: Yuyang LIU (liuyuyang@stu.pku.edu.cn)
-# Contributors: Jin ZHAO, Hua SU.
+# Contributors: Zixiang XIAO, Jin ZHAO, Hua SU.
 
 import copy
 import warnings
