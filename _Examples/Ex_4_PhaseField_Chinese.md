@@ -356,17 +356,17 @@ for i in range(len(MyLandscape.SaddleList)):
 
 此外，对于具有更复杂解景观的 $\kappa=0.01$ 系统，我们可以先采用快速BB步长配合Nesterov加速来获取近似的解景观。
 
-![png](Ex_4_PhaseField_NewKappa_files/Ex_4_PhaseField-NewKappa_14_0.png)
+![png](Ex_4_PhaseField-NewKappa_files/Ex_4_PhaseField-NewKappa_14_0.png)
 
 然而，由于BB步长在梯度较大区域可能变得过大，导致算法发散和搜索不完整，我们随后使用固定小步长重新启动搜索，以构建完整的解景观。这种先加速后精细搜索的两阶段策略有效平衡了计算效率和解的准确性。通过此方法获得的最终解景观如下：
 
-![png](Ex_4_PhaseField_NewKappa_files/Ex_4_PhaseField-NewKappa_17_0.png)
+![png](Ex_4_PhaseField-NewKappa_files/Ex_4_PhaseField-NewKappa_17_0.png)
 
 ([完整的结果请参考GitHub仓库中的文件](https://github.com/HiSDpackage/saddlescape/blob/main/gallery/Ex_4_PhaseField-NewKappa.ipynb))
 
 类似上面$\kappa=0.02$的情形我们可以手动绘制如下图形：
 
-![png](Ex_4_PhaseField_NewKappa_files/Ex_4_PhaseField-NewKappa.png)
+![png](Ex_4_PhaseField-NewKappa_files/Ex_4_PhaseField-NewKappa.png)
 
 另外，我们也可以基于快速傅里叶变换(FFT)的归一化互相关来定义判断函数，并获得相同的结果([Ex_4_PhaseField-NewSameSaddle](https://github.com/HiSDpackage/saddlescape/blob/main/gallery/Ex_4_PhaseField-NewSameSaddle.ipynb),[Ex_4_PhaseField-NewKappa-NewSameSaddle](https://github.com/HiSDpackage/saddlescape/blob/main/gallery/Ex_4_PhaseField-NewKappa-NewSameSaddle.ipynb))。
 

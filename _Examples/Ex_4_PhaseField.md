@@ -376,17 +376,17 @@ By linking the saddle-point phase field schematic diagram with the solution land
 
 Moreover, for a system with $\kappa=0.01$ that possesses a more complex solution landscape, we can initially employ the fast BB step size combined with Nesterov acceleration to obtain an approximate solution landscape. 
 
-![png](Ex_4_PhaseField_NewKappa_files/Ex_4_PhaseField-NewKappa_14_0.png)
+![png](Ex_4_PhaseField-NewKappa_files/Ex_4_PhaseField-NewKappa_14_0.png)
 
 However, since the BB step size might become excessively large in regions with steep gradients, potentially leading to algorithm divergence and incomplete exploration, we subsequently restart the search using a fixed small step size to construct the complete solution landscape. This two-stage strategy of accelerated search followed by refined exploration effectively balances computational efficiency and solution accuracy. The final solution landscape obtained through this approach is presented as follows:
 
-![png](Ex_4_PhaseField_NewKappa_files/Ex_4_PhaseField-NewKappa_17_0.png)
+![png](Ex_4_PhaseField-NewKappa_files/Ex_4_PhaseField-NewKappa_17_0.png)
 
 ([For the complete results, please refer to the file in the GitHub repository](https://github.com/HiSDpackage/saddlescape/blob/main/gallery/Ex_4_PhaseField-NewKappa.ipynb))
 
 Similarly to the case of $\kappa=0.02$ above, we can manually draw the following figure:
 
-![png](Ex_4_PhaseField_NewKappa_files/Ex_4_PhaseField-NewKappa.png)
+![png](Ex_4_PhaseField-NewKappa_files/Ex_4_PhaseField-NewKappa.png)
 
 Besides, we can also define the judgement function with normalized cross-correlation based on Fast Fourier Transform(FFT) and will get the same results([Ex_4_PhaseField-NewSameSaddle](https://github.com/HiSDpackage/saddlescape/blob/main/gallery/Ex_4_PhaseField-NewSameSaddle.ipynb),[Ex_4_PhaseField-NewKappa-NewSameSaddle](https://github.com/HiSDpackage/saddlescape/blob/main/gallery/Ex_4_PhaseField-NewKappa-NewSameSaddle.ipynb)).
 
