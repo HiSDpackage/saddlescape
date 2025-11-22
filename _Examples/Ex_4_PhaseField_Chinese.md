@@ -354,7 +354,7 @@ for i in range(len(MyLandscape.SaddleList)):
 我们把鞍点相场示意图结合解景观联系起来可以得到：
 ![png](Ex_4_PhaseField_files/Ex_4_PhaseField.png)
 
-此外，对于具有更复杂解景观的 $\kappa=0.01$ 系统，我们可以先采用快速BB步长配合Nesterov加速来获取近似的解景观。
+此外，对于具有更复杂解景观的 $\kappa=0.01$ 系统，我们可以先采用BB步长配合Nesterov加速来快速获取初步的解景观。
 
 ![png](Ex_4_PhaseField-NewKappa_files/Ex_4_PhaseField-NewKappa_14_0.png)
 
@@ -420,3 +420,4 @@ def SameSaddle(x, y):
 
 
     
+
