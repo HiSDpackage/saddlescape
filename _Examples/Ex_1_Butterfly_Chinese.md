@@ -291,7 +291,7 @@ MyLandscape.DrawTrajectory(ContourGridNum=100, ContourGridOut=25, DetailedTraj=T
 
 ```python
 MyLandscape.DrawConnection()
-MyLandscape.Save('output\Ex_Butterfly')
+MyLandscape.Save('output/Ex_Butterfly')
 # Save the data
 ```
 
@@ -314,7 +314,7 @@ output = {
             "Path Times": [row[3].tolist() for row in detail]
         }
 
-with open('output\Ex_ButterflyDetail.json', 'w') as f:
+with open('output/Ex_ButterflyDetail.json', 'w') as f:
     json.dump(output, f)
 ```
 
@@ -463,14 +463,14 @@ if "levels" in contourf_args and contourf_args["levels"] >= 0:
 
 
 ```python
-with open("output\Ex_Butterfly.json", "r") as f:
+with open("output/Ex_Butterfly.json", "r") as f:
     saddle_data = json.load(f) # Load the data
 saddleinfo = {"IDs": saddle_data["SaddleID"],
               "coords": np.array(saddle_data["Position"])[:, :, 0],
               "MIs": saddle_data["MorseIndex"],
               "parentIDs": saddle_data["FatherSet"]}
 
-with open("output\Ex_ButterflyDetail.json", "r") as f:
+with open("output/Ex_ButterflyDetail.json", "r") as f:
     traj_data = json.load(f) # Load the data
 trajinfo = {"trajectories": [np.array(traj) for traj in traj_data["Path Positions"]],
             "times": [time for time in traj_data["Path Times"]],
@@ -484,7 +484,7 @@ ani = animateSL(fig, ax, saddleinfo, trajinfo, dt_per_frame=0.02)
 
 
 ```python
-ani.save("output\Ex_Butterfly.mp4", writer="ffmpeg") # Must install ffmpeg
+ani.save("output/Ex_Butterfly.mp4", writer="ffmpeg") # Must install ffmpeg
 ```
 
 生成的动画图像显示如下：

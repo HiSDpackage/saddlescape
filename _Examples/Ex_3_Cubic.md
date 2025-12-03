@@ -292,7 +292,7 @@ We can also draw the solution landscape and save the data.
 
 ```python
 MyLandscape.DrawConnection()
-MyLandscape.Save('output\Ex_Cubic','mat')
+MyLandscape.Save('output/Ex_Cubic','mat')
 # Save the data
 ```
 

@@ -256,7 +256,7 @@ From the output, we can find a complete solution landscape.
 
 ```python
 MyLandscape.DrawConnection()
-MyLandscape.Save('output\Ex_MBP','pickle')
+MyLandscape.Save('output/Ex_MBP','pickle')
 # Save the data
 ```
 

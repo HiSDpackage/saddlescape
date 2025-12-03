@@ -256,7 +256,7 @@ MyLandscape.DrawTrajectory(ContourGridNum=100, ContourGridOut=25, DetailedTraj=T
 
 ```python
 MyLandscape.DrawConnection()
-MyLandscape.Save('output\Ex_MBP','pickle')
+MyLandscape.Save('output/Ex_MBP','pickle')
 # Save the data
 ```
 
