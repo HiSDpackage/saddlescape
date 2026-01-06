@@ -138,7 +138,7 @@ Please cite the associated paper when using this package in your research:
       url={https://arxiv.org/abs/2601.01081}, 
 }
 ```
-Direct Link:​ [https://arxiv.org/abs/2601.01081](https://arxiv.org/abs/2601.01081)
+Article Link:​ [https://arxiv.org/abs/2601.01081](https://arxiv.org/abs/2601.01081)
 
 ## Related Work
 
