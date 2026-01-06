@@ -122,6 +122,21 @@ HiSD 依赖以下Python库：
 - `Ex_3_Cubic.ipynb`
 - `Ex_4_PhaseField.ipynb`
 
+## 引用
+
+如在研究中使用本软件包，请引用以下相关论文：
+```
+@misc{liu2026saddlescapev10pythonpackage,
+      title={SaddleScape V1.0: A Python Package for Constructing Solution Landscapes via High-index Saddle Dynamics}, 
+      author={Yuyang Liu and Hua Su and Zixiang Xiao and Lei Zhang and Jin Zhao},
+      year={2026},
+      eprint={2601.01081},
+      archivePrefix={arXiv},
+      primaryClass={math.NA},
+      url={https://arxiv.org/abs/2601.01081}, 
+}
+```
+文章链接:​ [https://arxiv.org/abs/2601.01081](https://arxiv.org/abs/2601.01081)
 
 ## 相关工作
 
