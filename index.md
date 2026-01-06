@@ -124,6 +124,22 @@ Here are some example Jupyter Notebook files in `gallery` directory ([within the
 - `Ex_3_Cubic.ipynb`
 - `Ex_4_PhaseField.ipynb`
 
+## Citation
+
+We would appreciate it if you could cite the associated paper when using this package in your research:
+```
+@misc{liu2026saddlescapev10pythonpackage,
+      title={SaddleScape V1.0: A Python Package for Constructing Solution Landscapes via High-index Saddle Dynamics}, 
+      author={Yuyang Liu and Hua Su and Zixiang Xiao and Lei Zhang and Jin Zhao},
+      year={2026},
+      eprint={2601.01081},
+      archivePrefix={arXiv},
+      primaryClass={math.NA},
+      url={https://arxiv.org/abs/2601.01081}, 
+}
+```
+Direct Link:​ [https://arxiv.org/abs/2601.01081](https://arxiv.org/abs/2601.01081)
+
 ## Related Work
 
 The theoretical foundation of our software package is derived from the following research articles:
