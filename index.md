@@ -126,7 +126,7 @@ Here are some example Jupyter Notebook files in `gallery` directory ([within the
 
 ## Citation
 
-We would appreciate it if you could cite the associated paper when using this package in your research:
+Please cite the associated paper when using this package in your research:
 ```
 @misc{liu2026saddlescapev10pythonpackage,
       title={SaddleScape V1.0: A Python Package for Constructing Solution Landscapes via High-index Saddle Dynamics}, 
