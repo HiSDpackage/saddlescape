@@ -349,7 +349,7 @@ Heavy ball 加速的动量系数。
 ### 求解器参数
 这些参数与求解过程相关，控制 HiSD 过程的行为：`InitialPoint`、`Tolerance`、`SearchArea`、`TimeStep`、`MaxIter`、`SaveTrajectory`、`Verbose` 和 `ReportInterval`。
 
-**`InitialPoint`（必填）​**  
+**`InitialPoint`（必填）​**      
 **描述**  
 鞍点搜索的起始坐标。  
 
@@ -486,7 +486,7 @@ Heavy ball 加速的动量系数。
 ### 解景观参数
 这些参数与构建和导航解景观相关：`MaxIndex`、`MaxIndexGap`、`SameJudgement`、`InitialEigenVectors`、`PerturbationMethod`、`PerturbationRadius`、`PerturbationNumber` 和 `EigenCombination`。
 
-**`MaxIndex`（可选）​**  
+**`MaxIndex`（可选）​**      
 **描述**  
 要计算的鞍点最大阶数（k）。  
 - 阶数 0：使用标准 SD（最速下降）方法  
@@ -503,7 +503,7 @@ Heavy ball 加速的动量系数。
 
 --- 
 
-**`MaxIndexGap`（可选）​**  
+**`MaxIndexGap`（可选）​**      
 **描述**  
 在层次搜索中，父鞍点与子鞍点之间允许的最大阶数差。  
 
