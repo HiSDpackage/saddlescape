@@ -102,6 +102,8 @@ def adams_bashforth_2nd_for_x(instance, xlist, vlist, glist, dt, j):
         return x_next
 ```
 
+Due to the steepness of the energy function, using multi-step methods based on historical gradients may introduce larger errors and reduce search efficiency. This example is solely intended to demonstrate how to use a custom scheme. Nevertheless, the final search trajectories and landscapes obtained by both methods are essentially identical. Here we present only the results from the user-defined version. (Detailed results: default scheme result [Ex_2_MullerBrownPotential](https://github.com/HiSDpackage/saddlescape/blob/main/gallery/Ex_2_MullerBrownPotential.ipynb); user-defined scheme result [Ex_2_MullerBrownPotential-Adams2nd.ipynb](https://github.com/HiSDpackage/saddlescape/blob/main/gallery/Ex_2_MullerBrownPotential-Adams2nd.ipynb))
+
 ```python
 MyLandscape = Landscape(MaxIndex=k, AutoDiff=True, ExactHessian=True, EnergyFunction=MBP_energyfunc, 
                         InitialPoint=x0, TimeStep=dt, Acceleration=acceme,
