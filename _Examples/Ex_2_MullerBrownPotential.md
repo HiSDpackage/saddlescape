@@ -57,6 +57,7 @@ MBP_energyfunc='-200*exp(-1*(x1-1)**2-10*(x2-0)**2)-100*exp(-1*(x1-0)**2-10*(x2-
 '+11*(x1+0.5)*(x2-1.5)-6.5*(x2-1.5)**2)+15*exp(0.7*(x1+1)**2+0.6*(x1+1)*(x2-1)+0.7*(x2-1)**2)'
 ```
 
+
 We initialize the solver and run it.
 
 
@@ -69,6 +70,37 @@ acceme = 'none' # use the heavy ball to accelerate
 maxiter = 5000 # max iter
 ```
 
+As an example of user-defined temporal discretization, we apply a second-order explicit Adams update to the $x$-equation while retaining the default eigenspace update.
+
+```python
+def adams_bashforth_2nd_for_x(instance, xlist, vlist, glist, dt, j):
+    x_n = copy.deepcopy(xlist[-1])
+    g_n = copy.deepcopy(glist[-1])
+    if vlist is not None:
+      # ================== index-k (k>=1) ==================
+        v_n = copy.deepcopy(vlist[-1])
+        phi_n = g_n - 2.0 * np.matmul(v_n, np.matmul(v_n.T, g_n))
+        if j == 1 or len(glist) < 2:
+            dx = dt * phi_n
+        else:
+            v_prev = copy.deepcopy(vlist[-2])
+            g_prev = copy.deepcopy(glist[-2])
+            phi_prev = g_prev - 2.0 * np.matmul(v_prev, np.matmul(v_prev.T, g_prev))
+            dx = dt * (1.5 * phi_n - 0.5 * phi_prev)
+        x_next = x_n - dx
+        v_next, whetherkindex = instance.EigVecMethod(x_next, v_n)
+        return x_next, v_next, whetherkindex
+    else:
+        # ================== index-0 ==================
+        if j == 1 or len(glist) < 2:
+            dx = dt * g_n
+        else:
+            # Second-order explicit Adams-Bashforth scheme for x
+            g_prev = glist[-2]
+            dx = dt * (1.5 * g_n - 0.5 * g_prev)
+        x_next = x_n - dx
+        return x_next
+```
 
 ```python
 MyLandscape = Landscape(MaxIndex=k, AutoDiff=True, ExactHessian=True, EnergyFunction=MBP_energyfunc, 
@@ -85,7 +117,6 @@ MyLandscape.Run()
     [Config Sync] `Dim` parameter auto-adjusted to 2 based on `InitialPoint` dimensionality.
     Parameter `NumericalGrad` not specified - using default value False.
     Parameter `Momentum` not specified - using default value 0.0.
-    Parameter `BBStep` not specified - using default value False.
     Parameter `DimerLength` not specified - using default value 1e-05.
     Parameter `Tolerance` not specified - using default value 1e-06.
     Parameter `NesterovChoice` not specified - using default value 1.
@@ -105,7 +136,7 @@ MyLandscape.Run()
     Landscape Configuration:
     ------------------------------
     [Landscape] Current parameters (initialized):
-    Parameter `SameJudgementMethod` not specified - using default value <function LandscapeCheckParam.<locals>.<lambda> at 0x0000028FB799E830>.
+    Parameter `SameJudgementMethod` not specified - using default value <function LandscapeCheckParam.<locals>.<lambda> at 0x0000026E5D1DD480>.
     Parameter `PerturbationMethod` not specified - using default value uniform.
     Parameter `PerturbationRadius` not specified - using default value 0.0001.
     Parameter `InitialEigenVectors` not specified - using default value None.
@@ -123,6 +154,9 @@ MyLandscape.Run()
     ------------------------------
     
     
+    Iteration: 100|| Norm of gradient: 0.244166
+    Iteration: 200|| Norm of gradient: 0.001484
+    Iteration: 300|| Norm of gradient: 0.000009
     Non-degenerate saddle point identified: Morse index =1 (number of negative eigenvalues).
     
     
@@ -130,8 +164,15 @@ MyLandscape.Run()
     ------------------------------
     
     
-    Iteration: 100|| Norm of gradient: 0.070041
-    Iteration: 200|| Norm of gradient: 0.000007
+    Iteration: 100|| Norm of gradient: 42.551369
+    Iteration: 200|| Norm of gradient: 5.900040
+    Iteration: 300|| Norm of gradient: 0.644674
+    Iteration: 400|| Norm of gradient: 0.070684
+    Iteration: 500|| Norm of gradient: 0.007754
+    Iteration: 600|| Norm of gradient: 0.000851
+    Iteration: 700|| Norm of gradient: 0.000093
+    Iteration: 800|| Norm of gradient: 0.000010
+    Iteration: 900|| Norm of gradient: 0.000001
     Non-degenerate saddle point identified: Morse index =0 (number of negative eigenvalues).
     
     
@@ -139,7 +180,10 @@ MyLandscape.Run()
     ------------------------------
     
     
-    Iteration: 100|| Norm of gradient: 0.000010
+    Iteration: 100|| Norm of gradient: 112.301955
+    Iteration: 200|| Norm of gradient: 1.454184
+    Iteration: 300|| Norm of gradient: 0.006413
+    Iteration: 400|| Norm of gradient: 0.000028
     Non-degenerate saddle point identified: Morse index =0 (number of negative eigenvalues).
     
     
@@ -147,7 +191,10 @@ MyLandscape.Run()
     ------------------------------
     
     
-    Iteration: 100|| Norm of gradient: 0.000010
+    Iteration: 100|| Norm of gradient: 112.301955
+    Iteration: 200|| Norm of gradient: 1.454184
+    Iteration: 300|| Norm of gradient: 0.006413
+    Iteration: 400|| Norm of gradient: 0.000028
     Non-degenerate saddle point identified: Morse index =0 (number of negative eigenvalues).
     
     
@@ -155,8 +202,15 @@ MyLandscape.Run()
     ------------------------------
     
     
-    Iteration: 100|| Norm of gradient: 0.070041
-    Iteration: 200|| Norm of gradient: 0.000007
+    Iteration: 100|| Norm of gradient: 42.551369
+    Iteration: 200|| Norm of gradient: 5.900040
+    Iteration: 300|| Norm of gradient: 0.644674
+    Iteration: 400|| Norm of gradient: 0.070684
+    Iteration: 500|| Norm of gradient: 0.007754
+    Iteration: 600|| Norm of gradient: 0.000851
+    Iteration: 700|| Norm of gradient: 0.000093
+    Iteration: 800|| Norm of gradient: 0.000010
+    Iteration: 900|| Norm of gradient: 0.000001
     Non-degenerate saddle point identified: Morse index =0 (number of negative eigenvalues).
     
 We draw the search trajectory.
@@ -189,7 +243,7 @@ However, the M&uuml;ller-Brown Potential  describes a typical system with a mult
 
 
 ```python
-MyLandscape.RestartFromSaddle(1,-np.array([[-0.01],[0]]),1)
+MyLandscape.RestartFromSaddle(1,np.array([[-0.01],[0]]),1)
 # Calculate
 ```
 
@@ -199,9 +253,13 @@ MyLandscape.RestartFromSaddle(1,-np.array([[-0.01],[0]]),1)
     ------------------------------
     
     
-    Iteration: 100|| Norm of gradient: 3.005940
-    Iteration: 200|| Norm of gradient: 0.692884
-    Iteration: 300|| Norm of gradient: 0.000017
+    Iteration: 100|| Norm of gradient: 19.312756
+    Iteration: 200|| Norm of gradient: 73.350020
+    Iteration: 300|| Norm of gradient: 5.393141
+    Iteration: 400|| Norm of gradient: 0.296593
+    Iteration: 500|| Norm of gradient: 0.007024
+    Iteration: 600|| Norm of gradient: 0.000128
+    Iteration: 700|| Norm of gradient: 0.000001
     Non-degenerate saddle point identified: Morse index =1 (number of negative eigenvalues).
     
     
@@ -209,7 +267,11 @@ MyLandscape.RestartFromSaddle(1,-np.array([[-0.01],[0]]),1)
     ------------------------------
     
     
-    Iteration: 100|| Norm of gradient: 0.002417
+    Iteration: 100|| Norm of gradient: 173.689102
+    Iteration: 200|| Norm of gradient: 11.176428
+    Iteration: 300|| Norm of gradient: 0.189779
+    Iteration: 400|| Norm of gradient: 0.003139
+    Iteration: 500|| Norm of gradient: 0.000052
     Non-degenerate saddle point identified: Morse index =0 (number of negative eigenvalues).
     
     
@@ -217,8 +279,15 @@ MyLandscape.RestartFromSaddle(1,-np.array([[-0.01],[0]]),1)
     ------------------------------
     
     
-    Iteration: 100|| Norm of gradient: 0.343433
-    Iteration: 200|| Norm of gradient: 0.000033
+    Iteration: 100|| Norm of gradient: 59.383010
+    Iteration: 200|| Norm of gradient: 25.552611
+    Iteration: 300|| Norm of gradient: 2.958465
+    Iteration: 400|| Norm of gradient: 0.325632
+    Iteration: 500|| Norm of gradient: 0.035736
+    Iteration: 600|| Norm of gradient: 0.003921
+    Iteration: 700|| Norm of gradient: 0.000430
+    Iteration: 800|| Norm of gradient: 0.000047
+    Iteration: 900|| Norm of gradient: 0.000005
     Non-degenerate saddle point identified: Morse index =0 (number of negative eigenvalues).
     
     
@@ -226,8 +295,15 @@ MyLandscape.RestartFromSaddle(1,-np.array([[-0.01],[0]]),1)
     ------------------------------
     
     
-    Iteration: 100|| Norm of gradient: 0.343433
-    Iteration: 200|| Norm of gradient: 0.000033
+    Iteration: 100|| Norm of gradient: 59.383010
+    Iteration: 200|| Norm of gradient: 25.552611
+    Iteration: 300|| Norm of gradient: 2.958465
+    Iteration: 400|| Norm of gradient: 0.325632
+    Iteration: 500|| Norm of gradient: 0.035736
+    Iteration: 600|| Norm of gradient: 0.003921
+    Iteration: 700|| Norm of gradient: 0.000430
+    Iteration: 800|| Norm of gradient: 0.000047
+    Iteration: 900|| Norm of gradient: 0.000005
     Non-degenerate saddle point identified: Morse index =0 (number of negative eigenvalues).
     
     
@@ -235,7 +311,11 @@ MyLandscape.RestartFromSaddle(1,-np.array([[-0.01],[0]]),1)
     ------------------------------
     
     
-    Iteration: 100|| Norm of gradient: 0.002417
+    Iteration: 100|| Norm of gradient: 173.689102
+    Iteration: 200|| Norm of gradient: 11.176428
+    Iteration: 300|| Norm of gradient: 0.189779
+    Iteration: 400|| Norm of gradient: 0.003139
+    Iteration: 500|| Norm of gradient: 0.000052
     Non-degenerate saddle point identified: Morse index =0 (number of negative eigenvalues).
     
 
