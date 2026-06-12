@@ -455,7 +455,7 @@ Iteration frequency for console output when `Verbose=True`.
 
 --- 
 
-**`CustomTD` (Optional)**
+**`CustomTD` (Optional)**    
 **Description**  
 User-defined temporal discretization function.
 *   **`None`**: Use the built-in update scheme.
@@ -470,7 +470,7 @@ User-defined temporal discretization function.
 
 ---
 
-**`CustomTD Step` (Optional)**
+**`CustomTD Step` (Optional)**    
 **Description**  
 History length retained for `CustomTD`.
 *   **`None`**: Keep all history.
