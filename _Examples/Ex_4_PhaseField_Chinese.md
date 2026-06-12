@@ -10,20 +10,27 @@ mathjax: true
 
 ---
 
-在这个示例中，我们考虑一个二维相场模型：
+在本例中，我们构建了一个泛函系统的解景观。具体而言，考虑如下二维相场模型：
 
 $$
-E(\phi) = \int_{\Omega} \left( \frac{\kappa}{2} |\nabla \phi|^2 + \frac{1}{4} (1 - \phi^2)^2 \right) dx
+E(\phi) = \int_{\Omega} \left( \frac{\kappa}{2} |\nabla \phi|^2 + \frac{1}{4} (1 - \phi^2)^2 \right) dx.
 $$
 
-Allen-Cahn 方程如下：
+取 $\Omega = [0,1]^{2}$ 并施加周期边界条件，采用有限差分格式在 $64 \times 64$ 网格上对区域进行离散。
+
+更具体地，原始连续泛函被替换为离散能量
 
 $$
-\dot{\phi} = \kappa \Delta \phi + \phi - \phi^3
+E_h(\Phi) = h^2 \sum_{i,j} \left[ \frac{\kappa}{2} \left( \frac{(\Phi_{i+1,j} - \Phi_{i,j})^2}{h^2} + \frac{(\Phi_{i,j+1} - \Phi_{i,j})^2}{h^2} \right) + \frac{1}{4} (1 - \Phi_{i,j}^2)^2 \right],
 $$
 
-我们考虑定义域 $\Omega = [0,1]^{2}$ ，并采用周期性边界条件。 
-我们使用有限差分法对其进行离散化，网格划分为 $64 \times 64$。
+其中指标按周期边界条件理解。$E_h$ 是定义在 $\mathbb{R}^{64 \times 64}\cong \mathbb{R}^{4096}$ 上的普通有限维函数，其向量场为
+
+$$
+(\boldsymbol{F}_h)_{i,j} = -\frac{\partial E_h}{\partial \Phi_{i,j}} = h^2\left(\kappa \dfrac{\Phi_{i+1,j} + \Phi_{i-1,j} + \Phi_{i,j+1} + \Phi_{i,j-1} - 4\Phi_{i,j}}{h^2} + \Phi_{i,j} - \Phi_{i,j}^3\right).
+$$
+
+为改善数值缩放，实际实现中使用缩放后的向量场 $\boldsymbol{F}_h/h^2$，因为全局正因子 $h^2$ 仅对应时间的常数缩放，不影响驻点或其Morse指标。
 
 首先，我们将 `saddlescape-1.0` 目录的路径添加到系统路径中：
 
