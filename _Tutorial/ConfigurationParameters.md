@@ -455,6 +455,35 @@ Iteration frequency for console output when `Verbose=True`.
 
 --- 
 
+**`CustomTD` (Optional)**
+**Description**
+User-defined temporal discretization function.
+*   **`None`**: Use the built-in update scheme.
+*   **`Callable`**: Apply custom update using histories of x, v, and gradients.
+**Signature**: `CustomTD(instance, xlist, vlist, glist, dt, j)*`
+
+**Data Types**
+`None` | `Callable`
+
+**Default**
+`None`
+
+---
+
+**`CustomTD Step` (Optional)**
+**Description**
+History length retained for `CustomTD`.
+*   **`None`**: Keep all history.
+*   **`int(positive)`**: Keep the latest `CustomTD Step` steps. Set this value if the user wishes to employ `CustomTD` without retaining the full history.
+
+**Data Types**
+`None` | `int(positive)`
+
+**Default**
+`None`
+
+---
+
 ### Landscape Parameters
 These parameters are related to constructing and navigating the solution landscape: `MaxIndex`, `MaxIndexGap`, `SameJudgement`, `InitialEigenVectors`, `PerturbationMethod`, `PerturbationRadius`, `PerturbationNumber` and `EigenCombination`.
 
