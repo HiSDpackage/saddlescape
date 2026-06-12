@@ -454,6 +454,35 @@ Heavy ball 加速的动量系数。
 
 --- 
 
+**`CustomTD`（可选）**
+**描述**    
+用户自定义的时间离散化函数。
+*   **`None`**：使用内置更新方案。
+*   **`可调用对象`**：利用 x、v 和梯度的历史记录应用自定义更新。
+**签名**：`CustomTD(instance, xlist, vlist, glist, dt, j)*`
+
+**数据类型**    
+`None` | `可调用对象`
+
+**默认值**    
+`None`
+
+---
+
+**`CustomTD Step`（可选）**
+**描述**    
+为 `CustomTD` 保留的历史步长数。
+*   **`None`**：保留所有历史记录。
+*   **`正整数`**：仅保留最近 `CustomTD Step` 步的历史记录。若用户希望使用 `CustomTD` 但无需保留全部历史，可设置此值。
+
+**数据类型**    
+`None` | `正整数`
+
+**默认值**    
+`None`
+
+---
+
 ### 解景观参数
 这些参数与构建和导航解景观相关：`MaxIndex`、`MaxIndexGap`、`SameJudgement`、`InitialEigenVectors`、`PerturbationMethod`、`PerturbationRadius`、`PerturbationNumber` 和 `EigenCombination`。
 
