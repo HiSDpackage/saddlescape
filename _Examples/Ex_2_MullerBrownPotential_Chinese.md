@@ -70,6 +70,7 @@ maxiter = 5000 # max iter
 ```
 
 作为用户自定义时间离散化的一个例子，我们对 $x$ 方程应用二阶显式Adams更新，同时保留默认的特征空间更新。
+
 ```python
 def adams_bashforth_2nd_for_x(instance, xlist, vlist, glist, dt, j):
     x_n = copy.deepcopy(xlist[-1])
@@ -99,6 +100,8 @@ def adams_bashforth_2nd_for_x(instance, xlist, vlist, glist, dt, j):
         x_next = x_n - dx
         return x_next
 ```
+
+由于能量函数比较陡峭，所以用历史梯度的多步法反而会导致较大误差，降低搜索效率，此处只是为了展示如何使用自定义格式。但二者最终的搜索轨迹和景观基本一致，此处仅展示用户自定义版本的结果。（详细结果：默认格式结果[Ex_2_MullerBrownPotential](https://github.com/HiSDpackage/saddlescape/blob/main/gallery/Ex_2_MullerBrownPotential.ipynb)，用户自定义格式结果[Ex_2_MullerBrownPotential-Adams2nd.ipynb](https://github.com/HiSDpackage/saddlescape/blob/main/gallery/Ex_2_MullerBrownPotential-Adams2nd.ipynb)）
 
 ```python
 MyLandscape = Landscape(MaxIndex=k, AutoDiff=True, ExactHessian=True, EnergyFunction=MBP_energyfunc, 
