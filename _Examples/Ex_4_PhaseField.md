@@ -10,20 +10,28 @@ mathjax: true
 
 ---
 
-In this example, we consider a 2D phase field model:
+In this example, we construct the solution landscape of a functional system. Specifically, we consider a 2D phase-field model:
 
 $$
-E(\phi) = \int_{\Omega} \left( \frac{\kappa}{2} |\nabla \phi|^2 + \frac{1}{4} (1 - \phi^2)^2 \right) dx
+E(\phi) = \int_{\Omega} \left( \frac{\kappa}{2} |\nabla \phi|^2 + \frac{1}{4} (1 - \phi^2)^2 \right) dx.
 $$
 
-The Allen-Cahn equation is:
+We consider $\Omega = [0,1]^{2}$ with periodic boundary conditions and discretize the domain using a finite difference scheme on a $64 \times 64$ grid.
+
+More specifically, the original continuous functional is replaced by a discrete energy
 
 $$
-\dot{\phi} = \kappa \Delta \phi + \phi - \phi^3
+E_h(\Phi) = h^2 \sum_{i,j} \left[ \frac{\kappa}{2} \left( \frac{(\Phi_{i+1,j} - \Phi_{i,j})^2}{h^2} + \frac{(\Phi_{i,j+1} - \Phi_{i,j})^2}{h^2} \right) + \frac{1}{4} (1 - \Phi_{i,j}^2)^2 \right],
 $$
 
-We consider $\Omega = [0,1]^{2}$ with periodic boundary condition. 
-We discrete it using finite difference scheme of mesh grids $64 \times 64$. 
+where the indices are understood in the sense of periodic boundary conditions. This $E_h$ is an ordinary finite-dimensional function defined on $\mathbb{R}^{64 \times 64}\cong \mathbb{R}^{4096}$ and its vector field is
+
+$$
+(\boldsymbol{F}_h)_{i,j} = -\frac{\partial E_h}{\partial \Phi_{i,j}} = h^2\left(\kappa \dfrac{\Phi_{i+1,j} + \Phi_{i-1,j} + \Phi_{i,j+1} + \Phi_{i,j-1} - 4\Phi_{i,j}}{h^2} + \Phi_{i,j} - \Phi_{i,j}^3\right).
+$$
+
+For better numerical scaling, we use the rescaled vector field $\boldsymbol{F}_h/h^2$ in the implementation, since the global positive factor $h^2$ corresponds only to a constant rescaling of time and therefore has no effect on the stationary points or their Morse indices.
+
 
 First, we add the path of the `saddlescape-1.0` directory to the system path.
 
