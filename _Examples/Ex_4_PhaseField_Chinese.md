@@ -30,7 +30,7 @@ $$
 (\boldsymbol{F}_h)_{i,j} = -\frac{\partial E_h}{\partial \Phi_{i,j}} = h^2\left(\kappa \dfrac{\Phi_{i+1,j} + \Phi_{i-1,j} + \Phi_{i,j+1} + \Phi_{i,j-1} - 4\Phi_{i,j}}{h^2} + \Phi_{i,j} - \Phi_{i,j}^3\right).
 $$
 
-为改善数值缩放，实际实现中使用缩放后的向量场 $\boldsymbol{F}_h/h^2$，因为全局正因子 $h^2$ 仅对应时间的常数缩放，不影响驻点或其Morse指标。
+为改善数值缩放，实际实现中使用缩放后的向量场 $\boldsymbol{F}_h/h^2$，因为全局正因子 $h^2$ 仅对应时间的常数缩放，不影响鞍点或其Morse指数。
 
 首先，我们将 `saddlescape-1.0` 目录的路径添加到系统路径中：
 
