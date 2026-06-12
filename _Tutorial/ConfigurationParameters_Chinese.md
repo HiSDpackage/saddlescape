@@ -454,7 +454,7 @@ Heavy ball 加速的动量系数。
 
 --- 
 
-**`CustomTD`（可选）**
+**`CustomTD`（可选）**    
 **描述**    
 用户自定义的时间离散化函数。
 *   **`None`**：使用内置更新方案。
@@ -469,7 +469,7 @@ Heavy ball 加速的动量系数。
 
 ---
 
-**`CustomTD Step`（可选）**
+**`CustomTD Step`（可选）**    
 **描述**    
 为 `CustomTD` 保留的历史步长数。
 *   **`None`**：保留所有历史记录。
