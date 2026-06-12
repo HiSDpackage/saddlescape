@@ -30,7 +30,7 @@ $$
 (\boldsymbol{F}_h)_{i,j} = -\frac{\partial E_h}{\partial \Phi_{i,j}} = h^2\left(\kappa \dfrac{\Phi_{i+1,j} + \Phi_{i-1,j} + \Phi_{i,j+1} + \Phi_{i,j-1} - 4\Phi_{i,j}}{h^2} + \Phi_{i,j} - \Phi_{i,j}^3\right).
 $$
 
-For better numerical scaling, we use the rescaled vector field $\boldsymbol{F}_h/h^2$ in the implementation, since the global positive factor $h^2$ corresponds only to a constant rescaling of time and therefore has no effect on the stationary points or their Morse indices.
+For better numerical scaling, we use the rescaled vector field $\boldsymbol{F}_h/h^2$ in the implementation, since the global positive factor $h^2$ corresponds only to a constant rescaling of time and therefore has no effect on the saddle points or their Morse indices.
 
 
 First, we add the path of the `saddlescape-1.0` directory to the system path.
