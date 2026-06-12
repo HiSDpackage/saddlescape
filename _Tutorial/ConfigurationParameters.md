@@ -350,7 +350,7 @@ Momentum coefficient for heavy ball acceleration.
 ### Solver Parameters
 These parameters are related to the solver process and control the behavior of the HiSD process: `InitialPoint`, `Tolerance`, `SearchArea`, `TimeStep`, `MaxIter`, `SaveTrajectory`, `Verbose` and `ReportInterval`.
 
-**`InitialPoint` (Required)**
+**`InitialPoint` (Required)**    
 **Description**  
 The starting coordinates for saddle point search.  
 
@@ -404,7 +404,7 @@ Temporal discretization interval for dynamics.
 
 --- 
 
-**`MaxIter` (Optional)**  
+**`MaxIter` (Optional)**     
 **Description**  
 Maximum number of HiSD iterations permitted.  
 
@@ -487,7 +487,7 @@ History length retained for `CustomTD`.
 ### Landscape Parameters
 These parameters are related to constructing and navigating the solution landscape: `MaxIndex`, `MaxIndexGap`, `SameJudgement`, `InitialEigenVectors`, `PerturbationMethod`, `PerturbationRadius`, `PerturbationNumber` and `EigenCombination`.
 
-**`MaxIndex` (Optional)**
+**`MaxIndex` (Optional)**    
 **Description**  
 Maximum saddle index (k) to compute.  
 - Index 0: Uses standard SD (Steepest Descent) method  
@@ -504,7 +504,7 @@ Maximum saddle index (k) to compute.
 
 --- 
 
-**`MaxIndexGap` (Optional)** 
+**`MaxIndexGap` (Optional)**     
 **Description**  
 Maximum allowed index difference between parent and child saddle points during hierarchical search.  
 
