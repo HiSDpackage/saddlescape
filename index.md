@@ -92,7 +92,7 @@ Below is a basic workflow for using SaddleScape-1.0:
    landscape.RestartFromSaddle(BeginID, Perturbation, MaxIndex)
    ```
 
-For more detailed usage, please refer to the [documentation](https://github.com/HiSDpackage/saddlescape/blob/main/doc/Documentation.pdf) file.(You can also check in the ["Tutorial"](https://hisdpackage.github.io/saddlescape/Tutorial/Tutorial_overview) section on the left)
+For more detailed usage, please refer to the [documentation](https://github.com/HiSDpackage/saddlescape/blob/main/doc/Documentation.pdf) file. (You can also check in the ["Tutorial"](https://hisdpackage.github.io/saddlescape/Tutorial/Tutorial_overview) section on the left)
 
 ## Dependencies
 
@@ -117,7 +117,7 @@ Third-party packages:
 
 ## Examples
 
-Here are some example Jupyter Notebook files in `gallery` directory ([within the GitHub repository](https://github.com/HiSDpackage/saddlescape))  to help you get started quickly:(You can also check in the ["Examples"](https://hisdpackage.github.io/saddlescape/Examples/Examples_overview) section on the left)
+Here are some example Jupyter Notebook files in `gallery` directory ([within the GitHub repository](https://github.com/HiSDpackage/saddlescape))  to help you get started quickly: (You can also check in the ["Examples"](https://hisdpackage.github.io/saddlescape/Examples/Examples_overview) section on the left)
 
 - `Ex_1_Butterfly.ipynb`
 - `Ex_2_MullerBrownPotential.ipynb`
