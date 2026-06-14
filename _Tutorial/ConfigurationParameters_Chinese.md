@@ -347,7 +347,7 @@ Heavy ball 加速的动量系数。
 --- 
 
 ### 求解器参数
-这些参数与求解过程相关，控制 HiSD 过程的行为：`InitialPoint`、`Tolerance`、`SearchArea`、`TimeStep`、`MaxIter`、`SaveTrajectory`、`Verbose` 和 `ReportInterval`。
+这些参数与求解过程相关，控制 HiSD 过程的行为：`InitialPoint`、`Tolerance`、`SearchArea`、`TimeStep`、`MaxIter`、`SaveTrajectory`、`Verbose`、`ReportInterval`、`CustomTD` 和 `CustomTD Step`。
 
 **`InitialPoint`（必填）​**      
 **描述**  
