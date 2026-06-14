@@ -348,7 +348,7 @@ Momentum coefficient for heavy ball acceleration.
 --- 
 
 ### Solver Parameters
-These parameters are related to the solver process and control the behavior of the HiSD process: `InitialPoint`, `Tolerance`, `SearchArea`, `TimeStep`, `MaxIter`, `SaveTrajectory`, `Verbose` , `ReportInterval` , `CustomTD` and `CustomTD Step`.
+These parameters are related to the solver process and control the behavior of the HiSD process: `InitialPoint`, `Tolerance`, `SearchArea`, `TimeStep`, `MaxIter`, `SaveTrajectory`, `Verbose`, `ReportInterval`, `CustomTD` and `CustomTD Step`.
 
 **`InitialPoint` (Required)**    
 **Description**  
