@@ -366,7 +366,8 @@ Momentum coefficient for heavy ball acceleration.
 --- 
 
 ### Solver Parameters
-These parameters are related to the solver process and control the behavior of the HiSD process: `InitialPoint`, `Tolerance`, `SearchArea`, `TimeStep`, `MaxIter`, `SaveTrajectory`, `Verbose` and `ReportInterval`.
+These parameters are related to the solver process and control the behavior of the HiSD process: `InitialPoint`, `Tolerance`, `SearchArea`, `TimeStep`, `MaxIter`, `SaveTrajectory`, `Verbose`, `ReportInterval`, `CustomTD` and `CustomTD Step`.
+
 
 **`InitialPoint` (Required)**   
 **Description**  
@@ -901,7 +902,6 @@ The following standard library modules are required (no installation needed):
 import copy
 import sys
 import warnings
-import inspect
 import json
 import itertools
 import math
