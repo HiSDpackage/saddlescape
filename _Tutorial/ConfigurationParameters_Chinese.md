@@ -268,7 +268,8 @@ Grad = ["x2", "-x1 - 0.1*x2"]
 ---
 
 ### 加速参数
-这些参数与提高算法的速度和效率相关：`BBStep`、`Acceleration`、`NesterovChoice`、`NesterovRestart` 和 `Momentum`。
+这些参数与提高算法的速度和效率相关：`BBStep`、
+`Acceleration`、`NesterovChoice`、`NesterovRestart` 和 `Momentum`。
 
 **`BBStep`（可选）​**  
 **描述**  
