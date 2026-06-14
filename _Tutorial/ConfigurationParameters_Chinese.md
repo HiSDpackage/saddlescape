@@ -27,8 +27,8 @@ mathjax: true
 `SaddleScape` 包的配置参数分为不同的类别，每个类别专注于算法的特定部分。以下是不同类别及其相关参数的概述。
 
 ### 系统参数
-这些参数与系统设置及其一般属性相关：`Dim`、`EnergyFunction`、
-`Grad`、`AutoDiff`、`NumericalGrad`、`DimerLength`、`SymmetryCheck` 和 `GradientSystem`。
+这些参数与系统设置及其一般属性相关：`Dim`、`EnergyFunction`、`Grad`、
+`AutoDiff`、`NumericalGrad`、`DimerLength`、`SymmetryCheck` 和 `GradientSystem`。
 
 **`Dim`（可选）​**  
 **描述**  
@@ -194,7 +194,8 @@ Grad = ["x2", "-x1 - 0.1*x2"]
 --- 
 
 ### 特征参数
-这些参数控制特征对（特征值和特征向量）的计算方式：`EigenMethod`、`EigenMaxIter`、`EigenStepSize` 和 `PrecisionTol`。
+这些参数控制特征对（特征值和特征向量）的计算方式：`EigenMethod`、
+`EigenMaxIter`、`EigenStepSize` 和 `PrecisionTol`。
 
 **`EigenMethod`（可选）​**  
 **描述**  
@@ -348,8 +349,8 @@ Heavy ball 加速的动量系数。
 --- 
 
 ### 求解器参数
-这些参数与求解过程相关，控制 HiSD 过程的行为：`InitialPoint`、`Tolerance`、`SearchArea`、`TimeStep`、
-`MaxIter`、`SaveTrajectory`、`Verbose`、`ReportInterval`、`CustomTD` 和 `CustomTD Step`。
+这些参数与求解过程相关，控制 HiSD 过程的行为：`InitialPoint`、`Tolerance`、`SearchArea`、`TimeStep`、`MaxIter`、
+`SaveTrajectory`、`Verbose`、`ReportInterval`、`CustomTD` 和 `CustomTD Step`。
 
 **`InitialPoint`（必填）​**      
 **描述**  
