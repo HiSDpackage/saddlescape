@@ -488,7 +488,8 @@ Heavy ball 加速的动量系数。
 ---
 
 ### 解景观参数
-这些参数与构建和导航解景观相关：`MaxIndex`、`MaxIndexGap`、`SameJudgement`、`InitialEigenVectors`、`PerturbationMethod`、`PerturbationRadius`、`PerturbationNumber` 和 `EigenCombination`。
+这些参数与构建和导航解景观相关：`MaxIndex`、`MaxIndexGap`、`SameJudgement`、`InitialEigenVectors`、
+`PerturbationMethod`、`PerturbationRadius`、`PerturbationNumber` 和 `EigenCombination`。
 
 **`MaxIndex`（可选）​**      
 **描述**  
