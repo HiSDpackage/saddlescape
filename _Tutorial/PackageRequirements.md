@@ -34,7 +34,6 @@ The following standard library modules are required (no installation needed):
 import copy
 import sys
 import warnings
-import inspect
 import json
 import itertools
 import math
