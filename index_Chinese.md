@@ -100,7 +100,6 @@ HiSD 依赖以下Python库：
 - `copy`
 - `sys`
 - `warnings`
-- `inspect`
 - `json`
 - `itertools`
 - `math`
