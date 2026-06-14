@@ -102,7 +102,6 @@ Build-in packages:
 - `copy`
 - `sys`
 - `warnings`
-- `inspect`
 - `json`
 - `itertools`
 - `math`
