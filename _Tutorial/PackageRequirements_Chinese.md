@@ -52,11 +52,7 @@ import pickle
 
 ### 完整环境设置
 ```bash
-pip install "numpy>=2.2.6" \
-    "scipy>=1.15.2" \
-    "sympy>=1.14.0" \
-    "matplotlib>=3.10.5" \
-    "networkx>=3.4.2"
+pip install "numpy==2.2.6" "scipy==1.15.3" "sympy==1.14.0" "matplotlib==3.10.5" "networkx==3.4.2"
 ```
 
 ### 版本验证
