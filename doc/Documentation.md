@@ -504,7 +504,7 @@ History length retained for `CustomTD`.
 ---
 
 ### Landscape Parameters
-These parameters are related to constructing and navigating the solution landscape: `MaxIndex`, `MaxIndexGap`, `SameJudgement`, `InitialEigenVectors`, `PerturbationMethod`, `PerturbationRadius`, `PerturbationNumber` and `EigenCombination`.
+These parameters are related to constructing and navigating the solution landscape: `MaxIndex`, `MaxIndexGap`, `SameJudgementMethod`, `InitialEigenVectors`, `PerturbationMethod`, `PerturbationRadius`, `PerturbationNumber` and `EigenCombination`.
 
 **`MaxIndex` (Optional)**   
 **Description**  
@@ -540,7 +540,7 @@ If `MaxIndexGap = 2`:
 
 --- 
 
-**`SameJudgement` (Optional)**  
+**`SameJudgementMethod` (Optional)**  
 **Description**  
 Saddle point equivalence criterion.  
 
