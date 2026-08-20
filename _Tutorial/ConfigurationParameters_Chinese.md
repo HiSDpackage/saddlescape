@@ -488,7 +488,7 @@ Heavy ball 加速的动量系数。
 ---
 
 ### 解景观参数
-这些参数与构建和导航解景观相关：`MaxIndex`、`MaxIndexGap`、`SameJudgement`、`InitialEigenVectors`、
+这些参数与构建和导航解景观相关：`MaxIndex`、`MaxIndexGap`、`SameJudgementMethod`、`InitialEigenVectors`、
 `PerturbationMethod`、`PerturbationRadius`、`PerturbationNumber` 和 `EigenCombination`。
 
 **`MaxIndex`（可选）​**      
@@ -525,7 +525,7 @@ Heavy ball 加速的动量系数。
 
 --- 
 
-**`SameJudgement`（可选）​**  
+**`SameJudgementMethod`（可选）​**  
 **描述**  
 鞍点等价性判断标准。  
 
