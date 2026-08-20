@@ -45,18 +45,18 @@ Required external packages with version specifications:
 
 | Package       | Required Version | Installation Command           |
 |---------------|------------------|---------------------------------|
-| NumPy         | 2.2.3  | `pip install numpy==2.2.3`     |
+| NumPy         | 2.2.6  | `pip install numpy==2.2.6`     |
 | SciPy         | 1.15.2 | `pip install scipy==1.15.2`     |
-| SymPy         | 1.13.3 | `pip install sympy==1.13.3`       |
-| Matplotlib    | 3.10.0 | `pip install matplotlib==3.10.0` |
+| SymPy         | 1.14.0 | `pip install sympy==1.14.0`       |
+| Matplotlib    | 3.10.5 | `pip install matplotlib==3.10.5` |
 | NetworkX      | 3.4.2  | `pip install networkx==3.4.2`     |
 
 ### Full Environment Setup
 ```bash
-pip install "numpy>=2.2.3" \
+pip install "numpy>=2.2.6" \
     "scipy>=1.15.2" \
-    "sympy>=1.13.3" \
-    "matplotlib>=3.10.0" \
+    "sympy>=1.14.0" \
+    "matplotlib>=3.10.5" \
     "networkx>=3.4.2"
 ```
 
@@ -65,9 +65,9 @@ Check installed versions using:
 ```python
 import numpy, scipy, sympy, matplotlib, networkx
 
-print(f"NumPy: {numpy.__version__}")       # Should show 2.2.3
+print(f"NumPy: {numpy.__version__}")       # Should show 2.2.6
 print(f"SciPy: {scipy.__version__}")       # Should show 1.15.2
-print(f"SymPy: {sympy.__version__}")       # Should show 1.13.3
-print(f"Matplotlib: {matplotlib.__version__}")  # Should show 3.10.0
+print(f"SymPy: {sympy.__version__}")       # Should show 1.14.0
+print(f"Matplotlib: {matplotlib.__version__}")  # Should show 3.10.5
 print(f"NetworkX: {networkx.__version__}") # Should show 3.4.2
 ```
