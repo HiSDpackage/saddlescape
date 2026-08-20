@@ -921,11 +921,7 @@ Required external packages with version specifications:
 
 ### Full Environment Setup
 ```bash
-pip install "numpy>=2.2.6" \
-    "scipy>=1.15.3" \
-    "sympy>=1.14.0" \
-    "matplotlib>=3.10.5" \
-    "networkx>=3.4.2"
+pip install "numpy==2.2.6" "scipy==1.15.3" "sympy==1.14.0" "matplotlib==3.10.5" "networkx==3.4.2"
 ```
 
 ### Version Verification
